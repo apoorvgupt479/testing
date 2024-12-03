@@ -33,6 +33,7 @@ do
         git add .
         msg="commit ${DATE} #$i"
         git commit -m "$msg" --date="$(date -R -d ${DATE})"
+        git push -u origin main
     done
 
     DATE=$(date +%Y%m%d -d "$DATE + 1 day")
